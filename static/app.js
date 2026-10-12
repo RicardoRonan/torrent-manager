@@ -262,7 +262,7 @@ function renderRows() {
   const empty = $("#emptyState");
   empty.classList.toggle("show", items.length === 0);
   empty.innerHTML = state.connected
-    ? `<div class="loading"><span class="pixel-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="shimmer" style="animation:none">No torrents — click Add to start</span></div>`
+    ? `<div class="loading"><span class="pixel-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="shimmer" style="animation:none">No torrents. Click Add to start</span></div>`
     : `<div class="loading"><span class="pixel-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="shimmer">Connecting</span></div>`;
 }
 
@@ -712,7 +712,7 @@ function openSettings() {
       ${num("sUlLimit", "Global upload limit (B/s, 0=unlimited)", s.global_upload_limit)}
     </div>
     <div class="field"><label>Listen port range</label><input id="sPort" value="${esc(s.listen_port || "")}"></div>
-    <div class="hint" style="margin-bottom:10px">Forward this TCP+UDP port range on your router so peers can connect to you — the biggest real-world speed factor.</div>
+    <div class="hint" style="margin-bottom:10px">Forward this TCP+UDP port range on your router so peers can connect to you. This is the biggest real-world speed factor.</div>
     <div class="row2">
       <div>${chk("sDht", "DHT", s.dht)}${chk("sPex", "Peer exchange", s.pex)}${chk("sLpd", "Local peer discovery", s.lpd)}</div>
       <div>${chk("sEnc", "Encryption (arc4)", s.encryption)}${chk("sUpload", "Upload while downloading", s.upload_while_downloading)}</div>

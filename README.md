@@ -1,30 +1,30 @@
 # Torrent Manager
 
-A local web UI for adding and managing torrents — single or bulk — backed by
+A local web UI for adding and managing torrents, single or bulk, backed by
 [aria2](https://aria2.github.io/). FastAPI + SSE on the backend, no-build vanilla
 JS on the front end. Downloads never seed (`seed-time=0`).
 
 The interface uses a design language adapted from
-[Beautiful UI](https://www.beautifului.dev) by Turbo (MIT — see
+[Beautiful UI](https://www.beautifului.dev) by Turbo (MIT, see
 `LICENSE-beautifului`): soft monochrome surfaces with a single blue accent,
 hairline borders, generous radii, Inter + JetBrains Mono, and motion from the
 `cubic-bezier(.23,1,.32,1)` family.
 
 ## Features
 
-- **Torrent list** — capsule "task rows" with a progress ring, status chip, and
+- **Torrent list**: capsule "task rows" with a progress ring, status chip, and
   expandable body (detail chips + per-file sub-steps).
-- **Bulk operations** — hover-select rows and batch pause / resume / remove.
-- **Details drawer** — General, Files (select + sequential), Peers, Trackers.
-- **Organization** — categories (with save paths), tags, and saved views.
-- **Add ergonomically** — paste magnets, drop `.torrent` files, add URLs; pick
+- **Bulk operations**: hover-select rows and batch pause / resume / remove.
+- **Details drawer**: General, Files (select + sequential), Peers, Trackers.
+- **Organization**: categories (with save paths), tags, and saved views.
+- **Add ergonomically**: paste magnets, drop `.torrent` files, add URLs; pick
   category/tags/save path at add time.
-- **Bandwidth & queue** — global and per-torrent limits, presets, max concurrent.
-- **Privacy** — bind to an interface (e.g. a VPN) and an optional kill switch.
+- **Bandwidth & queue**: global and per-torrent limits, presets, max concurrent.
+- **Privacy**: bind to an interface (e.g. a VPN) and an optional kill switch.
 - **Desktop notifications** on completion, light/dark themes (dark first),
   keyboard shortcuts, pixel-grid loading states.
-- **Watch folder** — auto-add `.torrent` files dropped into a directory.
-- **Local actions** — open a file or reveal it in your file manager.
+- **Watch folder**: auto-add `.torrent` files dropped into a directory.
+- **Local actions**: open a file or reveal it in your file manager.
 - Session persistence via aria2, so the list survives restarts.
 
 ## Requirements
@@ -33,6 +33,10 @@ hairline borders, generous radii, Inter + JetBrains Mono, and motion from the
 - `aria2c` on your `PATH` (`sudo apt install aria2`)
 
 ## Setup
+
+On Windows, see [docs/WINDOWS-SETUP.md](docs/WINDOWS-SETUP.md) for a full
+walkthrough covering Python, `aria2c`, the virtual environment, and the magnet
+handler.
 
 ```bash
 python3 -m venv .venv
@@ -167,6 +171,7 @@ static/
   app.js       capsule task list, sidebar, drawer, modals
   style.css    component styles
 packaging/                   PyInstaller spec, icons, install scripts
+docs/                        Windows setup guide
 tests/                       unit tests (pytest)
 ```
 
@@ -205,6 +210,6 @@ All `/api/*` routes require the auth cookie or `X-Auth-Token`.
 
 This is a general-purpose BitTorrent client front-end. Downloading or
 distributing copyrighted material without permission is illegal in most
-jurisdictions. Use it only with content you have the right to download — for
+jurisdictions. Use it only with content you have the right to download, for
 example public-domain films from the [Internet Archive](https://archive.org),
 Linux distributions, or other freely licensed media.
