@@ -1,13 +1,6 @@
-The visual design language in this project (design tokens such as color, radii,
-shadows and motion, plus adapted interaction patterns like the sidebar nav with
-gliding hover, task-row list, and pixel-grid loading state) is adapted from
-"Beautiful UI" by Turbo / Shane Levine — https://www.beautifului.dev
-
-Beautiful UI is released under the MIT License:
-
 MIT License
 
-Copyright (c) 2026 Shane Levine
+Copyright (c) 2026 RicardoRonan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

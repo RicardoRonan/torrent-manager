@@ -4,12 +4,6 @@ A local web UI for adding and managing torrents, single or bulk, backed by
 [aria2](https://aria2.github.io/). FastAPI + SSE on the backend, no-build vanilla
 JS on the front end. Downloads never seed (`seed-time=0`).
 
-The interface uses a design language adapted from
-[Beautiful UI](https://www.beautifului.dev) by Turbo (MIT, see
-`LICENSE-beautifului`): soft monochrome surfaces with a single blue accent,
-hairline borders, generous radii, Inter + JetBrains Mono, and motion from the
-`cubic-bezier(.23,1,.32,1)` family.
-
 ## Features
 
 - **Torrent list**: capsule "task rows" with a progress ring, status chip, and
